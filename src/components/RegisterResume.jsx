@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import ResumeNav from './ResumeNav'
+import { Link } from 'react-router-dom'
 
 const RegisterResume = () => {
     const [input,setInput] = new useState(
@@ -54,7 +55,8 @@ const RegisterResume = () => {
                             <input type="password" name="password"  className="form-control" value={input.password} onChange={inputHandler} />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <button className="btn btn-info" onClick={readValues}>Register</button>
+                            <button className="btn btn-info" onClick={readValues}>Register</button>&nbsp;
+                            <Link to="/login">Login here</Link>
                         </div>
                     </div>
                 </div>
